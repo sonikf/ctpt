@@ -445,7 +445,7 @@ class modCTPT extends DolibarrModules
 		$param = array();
         $param['options']['c_typent:libelle:id::active=1'] = '';
         //$result7=$extrafields->addExtraField("Type", "type", "sellist", 101, "", "facture",0,0,"",$param);
-        $result7=$extrafields->addExtraField('series', "series", 'sellist', 210, '', 'facture',   0, 1, '', $param, 1, '', 1, 0, '', '1', '', '');		// Permissions
+        $result7=$extrafields->addExtraField('series', $langs->trans("CTPTDoc"), 'sellist', 210, '', 'facture',   0, 1, '', $param, 1, '', 1, 0, '', '1', '', '');		// Permissions
 		$this->remove($options);
 
 		$sql = array();
