@@ -446,7 +446,6 @@ class modCTPT extends DolibarrModules
         $param['options']['c_typent:libelle:id::active=1'] = '';
         //$result7=$extrafields->addExtraField("Type", "type", "sellist", 101, "", "facture",0,0,"",$param);
         $result1=$extrafields->addExtraField('1Series', "1series", 'sellist', 101, '', 'facture',   0, 1, '', $param, 1, '', 1, 0, '', '1', '', '');
-		//$result2=$extrafields->update('1Series', "1series", 'sellist', '', 'facture',   0, 0, 101, array('options'=>array('c_typent'=>'id as rowid, libelle WHERE active=1')), 1,'', 1, "Select Invoice Type", '', '', '', '');
 		// Permissions
 		$this->remove($options);
 
