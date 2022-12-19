@@ -2,6 +2,7 @@
 /* Copyright (C) 2004-2018  Laurent Destailleur     <eldy@users.sourceforge.net>
  * Copyright (C) 2018-2019  Nicolas ZABOURI         <info@inovea-conseil.com>
  * Copyright (C) 2019-2020  Frédéric France         <frederic.france@netlogic.fr>
+ * Copyright (C) 2022	    Nikos Drosis            <info@technicks.gr>
  * Copyright (C) 2022 Nick Fragoulis
  *
  * This program is free software; you can redistribute it and/or modify
@@ -288,7 +289,7 @@ class modCTPT extends DolibarrModules
 		$r = 0;
 		// Add here entries to declare new menus
 		/* BEGIN MODULEBUILDER TOPMENU */
-		$this->menu[$r++] = array(
+		/*$this->menu[$r++] = array(
 			'fk_menu'=>'', // '' if this is a top menu. For left menu, use 'fk_mainmenu=xxx' or 'fk_mainmenu=xxx,fk_leftmenu=yyy' where xxx is mainmenucode and yyy is a leftmenucode
 			'type'=>'top', // This is a Top menu entry
 			'titre'=>'ModuleCTPTName',
@@ -302,7 +303,7 @@ class modCTPT extends DolibarrModules
 			'perms'=>'1', // Use 'perms'=>'$user->rights->ctpt->myobject->read' if you want your menu with a permission rules
 			'target'=>'',
 			'user'=>2, // 0=Menu for internal users, 1=external users, 2=both
-		);
+		);*/
 		/* END MODULEBUILDER TOPMENU */
 		/* BEGIN MODULEBUILDER LEFTMENU MYOBJECT
 		$this->menu[$r++]=array(
@@ -437,15 +438,11 @@ class modCTPT extends DolibarrModules
 		// Create extrafields during init
 		include_once DOL_DOCUMENT_ROOT.'/core/class/extrafields.class.php';
 		$extrafields = new ExtraFields($this->db);
-		//$result1=$extrafields->addExtraField('ctpt_myattr1', "New Attr 1 label", 'boolean', 1,  3, 'thirdparty',   0, 0, '', '', 1, '', 0, 0, '', '', 'ctpt@ctpt', '$conf->ctpt->enabled');
-		//$result2=$extrafields->addExtraField('ctpt_myattr2', "New Attr 2 label", 'varchar', 1, 10, 'project',      0, 0, '', '', 1, '', 0, 0, '', '', 'ctpt@ctpt', '$conf->ctpt->enabled');
-		//$result3=$extrafields->addExtraField('ctpt_myattr3', "New Attr 3 label", 'varchar', 1, 10, 'bank_account', 0, 0, '', '', 1, '', 0, 0, '', '', 'ctpt@ctpt', '$conf->ctpt->enabled');
-		//$result4=$extrafields->addExtraField('ctpt_myattr4', "New Attr 4 label", 'select',  1,  3, 'thirdparty',   0, 1, '', array('options'=>array('code1'=>'Val1','code2'=>'Val2','code3'=>'Val3')), 1,'', 0, 0, '', '', 'ctpt@ctpt', '$conf->ctpt->enabled');
-		//$result5=$extrafields->addExtraField('ctpt_myattr5', "New Attr 5 label", 'text',    1, 10, 'user',         0, 0, '', '', 1, '', 0, 0, '', '', 'ctpt@ctpt', '$conf->ctpt->enabled');
 		$param = array();
-        $param['options']['c_typent:libelle:id::active=1'] = '';
-        //$result7=$extrafields->addExtraField("Type", "type", "sellist", 101, "", "facture",0,0,"",$param);
-        $result7=$extrafields->addExtraField('series', $langs->trans("CTPTDoc"), 'sellist', 210, '', 'facture',   0, 1, '', $param, 1, '', 1, 0, '', '1', '', '');		// Permissions
+                $param['options']['c_typent:libelle:id::active=1'] = '';
+                $result1=$extrafields->addExtraField('series', $langs->trans("CTPTDoc"), 'sellist', 210, '', 'facture',   0, 1, '', $param, 1, '', 1, 0, '', '1', '', '');		
+		
+		// Permissions
 		$this->remove($options);
 
 		$sql = array();
