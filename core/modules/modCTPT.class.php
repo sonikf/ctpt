@@ -3,7 +3,7 @@
  * Copyright (C) 2018-2019  Nicolas ZABOURI         <info@inovea-conseil.com>
  * Copyright (C) 2019-2020  Frédéric France         <frederic.france@netlogic.fr>
  * Copyright (C) 2022	    Nikos Drosis            <info@technicks.gr>
- * Copyright (C) 2022 Nick Fragoulis
+ * Copyright (C) 2022       Nick Fragoulis
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -440,8 +440,7 @@ class modCTPT extends DolibarrModules
 		$extrafields = new ExtraFields($this->db);
 		$param = array();
                 $param['options']['c_typent:libelle:id::active=1'] = '';
-                $result1=$extrafields->addExtraField('series', $langs->trans("CTPTDoc"), 'sellist', 210, '', 'facture',   0, 1, '', $param, 1, '', 1, 0, '', '1', '', '');		
-		
+		$result1=$extrafields->addExtraField('series', $langs->trans('CTPTDoc'), 'sellist', 210, '', 'facture',   0, 1, '', $param, 1, '', 1, 'Επιλέξτε σειρά', '', '1', '', '');        
 		// Permissions
 		$this->remove($options);
 
