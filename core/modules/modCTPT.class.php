@@ -437,6 +437,7 @@ class modCTPT extends DolibarrModules
 
 		// Create extrafields during init
 		include_once DOL_DOCUMENT_ROOT.'/core/class/extrafields.class.php';
+		$langs->loadLangs(array("errors", "admin", "ctpt@ctpt"));
 		$extrafields = new ExtraFields($this->db);
 		$param = array();
                 $param['options']['c_typent:libelle:id::active=1'] = '';
