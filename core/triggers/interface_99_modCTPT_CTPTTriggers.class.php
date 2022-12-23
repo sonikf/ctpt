@@ -222,7 +222,7 @@ class InterfaceCTPTTriggers extends DolibarrTriggers
 			case 'BILL_CREATE': {
 			$sql = "
                    CREATE TEMPORARY TABLE ".MAIN_DB_PREFIX."temp (
-                   `id` int(11) NOT NULL,
+                   `id` int(11) NOT NULL AUTO_INCREMENT,
                    `rowid` int(11),
                    `fk_soc` int(11),
                    `series` int(11),
@@ -251,7 +251,7 @@ class InterfaceCTPTTriggers extends DolibarrTriggers
 			case 'BILL_MODIFY': {
 			$sql = "
                    CREATE TEMPORARY TABLE ".MAIN_DB_PREFIX."temp (
-                   `id` int(11) NOT NULL,
+                   `id` int(11) NOT NULL AUTO_INCREMENT,
                    `rowid` int(11),
                    `fk_soc` int(11),
                    `series` int(11),
