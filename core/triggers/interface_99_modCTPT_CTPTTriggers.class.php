@@ -1,5 +1,6 @@
 <?php
-/* Copyright (C) 2022 SuperAdmin
+/* Copyright (C) 2022      Nick Fragoulis
+ * Copyright (C) 2022	   Nikos Drosis            <info@technicks.gr>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -48,10 +49,10 @@ class InterfaceCTPTTriggers extends DolibarrTriggers
 		$this->db = $db;
 
 		$this->name = preg_replace('/^Interface/i', '', get_class($this));
-		$this->family = "demo";
+		$this->family = "financial";
 		$this->description = "CTPT triggers.";
 		// 'development', 'experimental', 'dolibarr' or version
-		$this->version = 'development';
+		$this->version = '1.0';
 		$this->picto = 'ctpt@ctpt';
 	}
 
