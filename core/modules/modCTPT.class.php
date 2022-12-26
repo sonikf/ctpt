@@ -20,7 +20,7 @@
  */
 
 /**
- * 	\defgroup   ctpt     Module CTPT
+ *  \defgroup   ctpt     Module CTPT
  *  \brief      CTPT module descriptor.
  *
  *  \file       htdocs/ctpt/core/modules/modCTPT.class.php
@@ -441,7 +441,7 @@ class modCTPT extends DolibarrModules
 		$extrafields = new ExtraFields($this->db);
 		$param = array();
                 $param['options']['c_typent:libelle:id::active=1'] = '';
-		$result1=$extrafields->addExtraField('series', $langs->trans('CTPTDoc'), 'sellist', 210, '', 'facture',   0, 1, '', $param, 1, '', 1, 'Επιλέξτε σειρά', '', '1', '', '');        
+		$result1=$extrafields->addExtraField('series', $langs->trans('CTPTDoc'), 'sellist', 210, '', 'facture', 0, 1, 'null', $param, 1, '', 3, 'Επιλέξτε σειρά', '', '', '', '');        
 		// Permissions
 		$this->remove($options);
 
