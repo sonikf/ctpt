@@ -52,7 +52,7 @@ class InterfaceCTPTTriggers extends DolibarrTriggers
 		$this->family = "financial";
 		$this->description = "CTPT triggers.";
 		// 'development', 'experimental', 'dolibarr' or version
-		$this->version = '1.0';
+		$this->version = '1.0.1';
 		$this->picto = 'ctpt@ctpt';
 	}
 
