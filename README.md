@@ -20,7 +20,7 @@ Other external modules are available on [Dolistore.com](https://www.dolistore.co
 
 ## Translations
 
-Translations can be completed manually by editing files into directories *langs*.
+Translations can be completed manually by editing files into directories [langs](https://github.com/sonikf/ctpt/tree/main/langs).
 
 <!--
 This module contains also a sample configuration for Transifex, under the hidden directory [.tx](.tx), so it is possible to manage translation using this service.
