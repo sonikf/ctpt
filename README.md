@@ -15,7 +15,7 @@ Other external modules are available on [Dolistore.com](https://www.dolistore.co
 ## Version Information:
 * Name: ctpt
 * Prerequisites: Dolibarr version 16.x+
-* Current version: 1.0 Dev
+* Current version: 1.0.1 Dev
 ***
 
 ## Translations
