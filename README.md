@@ -19,8 +19,8 @@ Other external modules are available on [Dolistore.com](https://www.dolistore.co
 ***
 
 ## Translations
-
-Translations can be completed manually by editing files into directories [langs](https://github.com/sonikf/ctpt/tree/main/langs).
+User interface language: English, Greek
+Translations can be completed manually by editing files into directories [langs](https://github.com/sonikf/ctpt/tree/main/langs), or better yet make a pull request for your language!
 
 <!--
 This module contains also a sample configuration for Transifex, under the hidden directory [.tx](.tx), so it is possible to manage translation using this service.
