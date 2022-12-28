@@ -4,11 +4,12 @@
 
 CTPT stands for "Change Third Party Type" from the New invoice creation card.
  
-Useful for those ones using third party type vocabulary to change the mask - series with {tttt} tag.
+Useful for those using third party type vocabulary to change the mask - series with {tttt} tag.
 
-<!--
-![Screenshot ctpt](img/screenshot_ctpt.png?raw=true "CTPT"){imgmd}
--->
+![1](https://user-images.githubusercontent.com/93765174/209882861-134a99e5-1949-4b24-9017-940d46c7c22d.png)
+
+![2](https://user-images.githubusercontent.com/93765174/209882878-8d520949-b902-4672-83b8-cab77caa2ebb.png)
+
 
 Other external modules are available on [Dolistore.com](https://www.dolistore.com).
 ***
