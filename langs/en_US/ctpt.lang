@@ -20,7 +20,7 @@
 # Module label 'ModuleCTPTName'
 ModuleCTPTName = CTPT
 # Module description 'ModuleCTPTDesc'
-ModuleCTPTDesc = CTPT description
+ModuleCTPTDesc = "Change Third Party Type" from the New invoice creation card.
 
 #
 # Admin page
@@ -28,10 +28,10 @@ ModuleCTPTDesc = CTPT description
 CTPTSetup = CTPT setup
 Settings = Settings
 CTPTSetupPage = No setup required
-CTPT_MYPARAM1 = My param 1
-CTPT_MYPARAM1Tooltip = My param 1 tooltip
-CTPT_MYPARAM2=My param 2
-CTPT_MYPARAM2Tooltip=My param 2 tooltip
+# CTPT_MYPARAM1 = My param 1
+# CTPT_MYPARAM1Tooltip = My param 1 tooltip
+# CTPT_MYPARAM2=My param 2
+# CTPT_MYPARAM2Tooltip=My param 2 tooltip
 CTPTDoc = Series
 CTPT_select_series = Select series
 
@@ -52,5 +52,5 @@ MyPageName = My page name
 #
 # Sample widget
 #
-MyWidget = My widget
-MyWidgetDescription = My widget description
+# MyWidget = My widget
+# MyWidgetDescription = My widget description
