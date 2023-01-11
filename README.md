@@ -10,6 +10,7 @@ Useful for those using third party type vocabulary to change the mask - series w
 
 ![2](https://user-images.githubusercontent.com/93765174/209882878-8d520949-b902-4672-83b8-cab77caa2ebb.png)
 
+For more info read the [wiki](https://github.com/sonikf/ctpt/wiki)
 
 Other external modules are available on [Dolistore.com](https://www.dolistore.com).
 ***
