@@ -82,6 +82,7 @@ $type = 'myobject';
 $error = 0;
 $setupnotempty = 0;
 
+/* //Disable FormSetup not needed
 // Set this to 1 to use the factory to manage constants. Warning, the generated module will be compatible with version v15+ only
 $useFormSetup = 1;
 
@@ -164,7 +165,7 @@ $setupnotempty =+ count($formSetup->items);
 
 
 $dirmodels = array_merge(array('/'), (array) $conf->modules_parts['models']);
-
+*/
 
 /*
  * Actions
