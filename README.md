@@ -12,7 +12,8 @@ Useful for those using third party type vocabulary to change the mask - series w
 
 For more info read the [wiki](https://github.com/sonikf/ctpt/wiki)
 
-Other external modules are available on [Dolistore.com](https://www.dolistore.com).
+Download from [Dolistore.com](https://www.dolistore.com/en/modules/1834-CTPT.html) where other external modules are also available
+
 ***
 ## Version Information:
 * Name: ctpt
