@@ -32,7 +32,7 @@ CTPTSetupPage = Δεν απαιτείται ρύθμιση
 # CTPT_MYPARAM1Tooltip = My param 1 tooltip
 # CTPT_MYPARAM2=My param 2
 # CTPT_MYPARAM2Tooltip=My param 2 tooltip
-CTPTDoc = Τύπος παραστατικού - Σειρά
+CTPTDoc = Σειρά
 CTPT_select_series = Επιλέξτε σειρά
 
 
