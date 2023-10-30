@@ -221,63 +221,79 @@ class InterfaceCTPTTriggers extends DolibarrTriggers
 
 			// Bills
 			case 'BILL_CREATE': {
+			$sql = "DROP TABLE IF EXISTS ".MAIN_DB_PREFIX."temp";
+
+			$resql = $this->db->query($sql);
+			if (!$resql) {
+				$error++;
+			}
+
 			$sql = "
-                   CREATE TEMPORARY TABLE ".MAIN_DB_PREFIX."temp (
-                   `id` int(11) NOT NULL AUTO_INCREMENT,
-                   `rowid` int(11),
-                   `fk_soc` int(11),
-                   `series` int(11),
-                   `fk_object` int(11),
-                   PRIMARY KEY(id))"; 
-                   
+                        CREATE TEMPORARY TABLE ".MAIN_DB_PREFIX."temp (
+                        `id` int(11) NOT NULL,
+                        `rowid` int(11),
+                        `fk_soc` int(11),
+                        `series` int(11),
+                        `fk_object` int(11),
+                        PRIMARY KEY(id))";
+
 			$resql = $this->db->query($sql);
 			if (!$resql) {
 				$error++;
-			}	
-			
+			}
+
 			$sql = "INSERT INTO ".MAIN_DB_PREFIX."temp (fk_soc, rowid, series, fk_object) SELECT ".MAIN_DB_PREFIX."facture.fk_soc, ".MAIN_DB_PREFIX."facture_extrafields.rowid, ".MAIN_DB_PREFIX."facture_extrafields.series, ".MAIN_DB_PREFIX."facture_extrafields.fk_object FROM ".MAIN_DB_PREFIX."facture_extrafields INNER JOIN ".MAIN_DB_PREFIX."facture ON ".MAIN_DB_PREFIX."facture_extrafields.fk_object = ".MAIN_DB_PREFIX."facture.rowid ORDER BY ".MAIN_DB_PREFIX."facture.rowid DESC LIMIT 1"; 
-		
+
 			$resql = $this->db->query($sql);
 			if (!$resql) {
 				$error++;
-			}		
-			
-		    $sql1 = "UPDATE ".MAIN_DB_PREFIX."temp INNER JOIN ".MAIN_DB_PREFIX."societe ON ".MAIN_DB_PREFIX."temp.fk_soc = ".MAIN_DB_PREFIX."societe.rowid SET ".MAIN_DB_PREFIX."societe.fk_typent = ".MAIN_DB_PREFIX."temp.series";	
-		
+			}
+
+            		$sql1 = "UPDATE ".MAIN_DB_PREFIX."temp INNER JOIN ".MAIN_DB_PREFIX."societe ON ".MAIN_DB_PREFIX."temp.fk_soc = ".MAIN_DB_PREFIX."societe.rowid SET ".MAIN_DB_PREFIX."societe.fk_typent = ".MAIN_DB_PREFIX."temp.series";	
+
 			$resql = $this->db->query($sql1);
 			if (!$resql) {
 				$error++;
-			}}
-			
+			}
+}
+
+
 			case 'BILL_MODIFY': {
+			$sql = "DROP TABLE IF EXISTS ".MAIN_DB_PREFIX."temp";
+
+			$resql = $this->db->query($sql);
+			if (!$resql) {
+				$error++;
+			}
+
 			$sql = "
-                   CREATE TEMPORARY TABLE ".MAIN_DB_PREFIX."temp (
-                   `id` int(11) NOT NULL AUTO_INCREMENT,
-                   `rowid` int(11),
-                   `fk_soc` int(11),
-                   `series` int(11),
-                   `fk_object` int(11),
-                   PRIMARY KEY(id))"; 
-                   
+                        CREATE TEMPORARY TABLE ".MAIN_DB_PREFIX."temp (
+                        `id` int(11) NOT NULL,
+                        `rowid` int(11),
+                        `fk_soc` int(11),
+                        `series` int(11),
+                        `fk_object` int(11),
+                        PRIMARY KEY(id))";
+
 			$resql = $this->db->query($sql);
 			if (!$resql) {
 				$error++;
-			}	
-			
+			}
+
 			$sql = "INSERT INTO ".MAIN_DB_PREFIX."temp (fk_soc, rowid, series, fk_object) SELECT ".MAIN_DB_PREFIX."facture.fk_soc, ".MAIN_DB_PREFIX."facture_extrafields.rowid, ".MAIN_DB_PREFIX."facture_extrafields.series, ".MAIN_DB_PREFIX."facture_extrafields.fk_object FROM ".MAIN_DB_PREFIX."facture_extrafields INNER JOIN ".MAIN_DB_PREFIX."facture ON ".MAIN_DB_PREFIX."facture_extrafields.fk_object = ".MAIN_DB_PREFIX."facture.rowid ORDER BY ".MAIN_DB_PREFIX."facture.rowid DESC LIMIT 1"; 
-		
+
 			$resql = $this->db->query($sql);
 			if (!$resql) {
 				$error++;
-			}		
-			
-		    $sql1 = "UPDATE ".MAIN_DB_PREFIX."temp INNER JOIN ".MAIN_DB_PREFIX."societe ON ".MAIN_DB_PREFIX."temp.fk_soc = ".MAIN_DB_PREFIX."societe.rowid SET ".MAIN_DB_PREFIX."societe.fk_typent = ".MAIN_DB_PREFIX."temp.series";	
-		
+			}
+
+            		$sql1 = "UPDATE ".MAIN_DB_PREFIX."temp INNER JOIN ".MAIN_DB_PREFIX."societe ON ".MAIN_DB_PREFIX."temp.fk_soc = ".MAIN_DB_PREFIX."societe.rowid SET ".MAIN_DB_PREFIX."societe.fk_typent = ".MAIN_DB_PREFIX."temp.series";	
+
 			$resql = $this->db->query($sql1);
 			if (!$resql) {
 				$error++;
-			}}
-			    
+			}
+}		    
 			//case 'BILL_VALIDATE':
 			//case 'BILL_UNVALIDATE':
 			//case 'BILL_SENTBYMAIL':
