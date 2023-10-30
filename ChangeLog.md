@@ -1,4 +1,8 @@
 # CHANGELOG CTPT FOR [DOLIBARR ERP CRM](https://www.dolibarr.org)
+
+## 1.0.4
+Fix error table exists
+
 ## 1.0.3
 Disable Setup Form
 
