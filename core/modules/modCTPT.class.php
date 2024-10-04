@@ -440,7 +440,11 @@ class modCTPT extends DolibarrModules
 		$langs->loadLangs(array("errors", "admin", "ctpt@ctpt"));
 		$extrafields = new ExtraFields($this->db);
 		$param = array();
-                $param['options']['c_typent:libelle:id::active=1'] = '';
+		if (floatval(DOL_VERSION) < 20.0) {
+			$param['options']['c_typent:libelle:id::active=1'] = '';
+		} else {
+			$param['options']['c_typent:libelle:id::(active:=:1)'] = '';
+		}
 		$result1=$extrafields->addExtraField('series', $langs->trans('CTPTDoc'), 'sellist', 210, '', 'facture', 0, 1, '', $param, 1, '', 3, $langs->trans('CTPT_select_series'), '', '', '', '');        
 		// Permissions
 		$this->remove($options);
