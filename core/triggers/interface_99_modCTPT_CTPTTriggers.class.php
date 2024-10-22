@@ -1,6 +1,7 @@
 <?php
 /* Copyright (C) 2022      Nick Fragoulis
  * Copyright (C) 2022	   Nikos Drosis            <ndrosis@sysaid.gr>
+ * Copyright (C) 2024      Stefan Mayer
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -230,7 +231,7 @@ class InterfaceCTPTTriggers extends DolibarrTriggers
 
 			$sql = "
                         CREATE TEMPORARY TABLE ".MAIN_DB_PREFIX."temp (
-                        `id` int(11) NOT NULL,
+                        `id` int(11) NOT NULL AUTO_INCREMENT,
                         `rowid` int(11),
                         `fk_soc` int(11),
                         `series` int(11),
@@ -268,7 +269,7 @@ class InterfaceCTPTTriggers extends DolibarrTriggers
 
 			$sql = "
                         CREATE TEMPORARY TABLE ".MAIN_DB_PREFIX."temp (
-                        `id` int(11) NOT NULL,
+                        `id` int(11) NOT NULL AUTO_INCREMENT,
                         `rowid` int(11),
                         `fk_soc` int(11),
                         `series` int(11),
