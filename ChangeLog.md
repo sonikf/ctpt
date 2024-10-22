@@ -1,5 +1,11 @@
 # CHANGELOG CTPT FOR [DOLIBARR ERP CRM](https://www.dolibarr.org)
 
+## 1.0.6
+fix: Add missing AUTO_INCREMENT for primary key
+
+## 1.0.5
+compatibility fix for extrafield value(Universai Search Filter syntax)
+
 ## 1.0.4
 Fix error table exists
 
