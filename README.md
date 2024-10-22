@@ -17,7 +17,7 @@ Download from [Dolistore.com](https://www.dolistore.com/en/modules/1834-CTPT.htm
 ***
 ## Version Information:
 * Name: ctpt
-* Current version: 1.0.3
+* Current version: 1.0.6
 * Prerequisites: 
   * Dolibarr version 16.x.+
   * PHP: 7.4 +
