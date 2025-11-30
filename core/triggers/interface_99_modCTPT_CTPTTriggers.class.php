@@ -92,7 +92,8 @@ class InterfaceCTPTTriggers extends DolibarrTriggers
 	 */
 	public function runTrigger($action, $object, User $user, Translate $langs, Conf $conf)
 	{
-		if (empty($conf->ctpt) || empty($conf->ctpt->enabled)) {
+		$error = 0;
+		if (empty($conf->ctpt) || empty($conf->ctpt->enabled) || !isModEnabled('ctpt')) {
 			return 0; // If module is not enabled, we do nothing
 		}
 
